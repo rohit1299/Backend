@@ -1,0 +1,1 @@
+Topics covered : How internet works,APIs,NodeJs and Rest.
