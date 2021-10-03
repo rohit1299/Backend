@@ -1,0 +1,46 @@
+Redis Installation
+For Windows
+
+Enable WSL from "Turn Windows features on or off settings"
+Restart the machine
+Install Ubuntu20.04 from Windows Store
+Open Ubuntu and setup name and password
+Run the following commands:
+sudo apt-get update sudo apt-get upgrade sudo apt-get install redis-server sudo service redis-server restart redis-cli
+
+
+for strigs
+
+SET key value -> sets a value to a key : set < key name>
+GET key -> gets a value from a key : get
+ttl key -> tttl(time to leave) it expire the key at given time : ttl
+KEYS * -> show all exist keys : key *
+DEL key -> deletes a key and its value : del
+FLUSHALL -> deletes all key : flushall
+EXISTS key -> if key exit return 1 otherwise 0 (for key check) : exists
+expire key time -> automatically delete the key after the specific time: expire
+setex key time value -> set and expire key at same time : setex
+
+
+For Arrays
+
+LPUSH array value -> push the element at 0th index : lpush
+RPUSH array value -> add the element at last index : rpush
+LRANGE array start stop -> get range of elements from a list : lrange
+LPOP array -> removes and gets the first element of list : lpop
+RPOP array -> removes and gets the last element of list : rpop
+
+
+For Sets
+
+SADD myset value -> it dosent repeat the key : sadd
+SMEMBERS myset -> to get all the members of the set : smembers
+
+For Object/Hash
+
+
+HSET key field value -> sets the hash field with string value : hset
+HGET key field -> gets the hash field with string value : hget
+HGETALL key -> gets all the fields and values in a specific key: hgetall
+HDEL key field -> delete the hash field : hdel
+HEXISTS key field -> exist th hash field : hexists
